@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'header';
+@import 'form';
+@import 'buttons';
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  background-color: $base-bg-color;
+  color: $text-base-color;
+  font-size: 18px;
+  font-family: Avenir;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: $text-base-color;
+}
+
+.container {
+  padding: 32px 26px;
+  width: 100%;
+}
