@@ -9,15 +9,11 @@ input, select {
   &.text {
     width: 100%;
     margin: 8px 0px;
-    padding: 16px 24px;
+    padding: 12px 24px;
     border-radius: 10px;
     border: none;
     background-color: $second-bg-color;
   }
-}
-
-label {
-  font-size: 18px;
 }
 
 textarea {
@@ -28,8 +24,6 @@ textarea {
   resize: vertical;
   border: 1px solid #EBEBEB;
 }
-
-
 
 .field {
   margin-top: 16px;
