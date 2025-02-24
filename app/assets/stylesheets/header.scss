@@ -1,0 +1,25 @@
+@import 'variables';
+
+$avatar-size: 40px;
+$header-padding-y: 12px;
+$back-icon-size: 16px;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $base-bg-color;
+  padding: $header-padding-y 26px;
+  border-bottom: 1px solid $second-bg-color;
+
+  &_pageTitle {
+    padding: 4px 0;
+  }
+
+
+  &_loginBtn {
+    background-color: $second-bg-color;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
