@@ -1,11 +1,17 @@
 @import 'variables';
 
+form {
+  position: relative;
+  height: calc(100vh - 160px);
+}
+
 input, select {
   &.text {
     width: 100%;
     margin: 8px 0px;
     padding: 16px 24px;
     border-radius: 10px;
+    border: none;
     background-color: $second-bg-color;
   }
 }
@@ -21,4 +27,20 @@ textarea {
   min-height: 440px;
   resize: vertical;
   border: 1px solid #EBEBEB;
+}
+
+
+
+.field {
+  margin-top: 16px;
+}
+
+.actions {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  width: 100%;
 }
