@@ -9,16 +9,16 @@
 john = User.create!(email: 'john@example.com', password: 'password')
 emily = User.create!(email: 'emily@example.com', password: 'password')
 
-5.times do
+1.times do
   john.boards.create!(
-    title: Faker::Lorem.sentence(word_count: 5),
-    content: Faker::Lorem.sentence(word_count: 100)
+    title: Faker::Lorem.sentence(word_count: 1),
+    content: Faker::Lorem.sentence(word_count: 8)
   )
 end
 
-5.times do
+1.times do 
   emily.boards.create!(
-    title: Faker::Lorem.sentence(word_count: 5),
-    content: Faker::Lorem.sentence(word_count: 100)
+    title: Faker::Lorem.sentence(word_count: 1),
+    content: Faker::Lorem.sentence(word_count: 8)
   )
 end
