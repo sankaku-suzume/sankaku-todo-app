@@ -11,8 +11,17 @@ $back-icon-size: 16px;
   padding: $header-padding-y 26px;
   border-bottom: 1px solid $second-bg-color;
 
+  &_logos {
+    height: $avatar-size;
+  }
+
   &_pageTitle {
-    padding: 4px 0;
+    line-height: $avatar-size;
+  }
+
+  .dropdown {
+    width: $avatar-size;
+    height: $avatar-size;
   }
 
 
@@ -21,5 +30,13 @@ $back-icon-size: 16px;
     border-radius: 4px;
     font-size: 12px;
     padding: 8px 16px;
+    height: 34px;
+    margin: 4px 0;
+  }
+
+  &_avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
   }
 }

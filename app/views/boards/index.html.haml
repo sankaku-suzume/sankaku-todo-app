@@ -1,1 +1,21 @@
-index
+.container
+  %h2 All Boards
+  - @boards.each do |board|
+    .board
+      .board_header
+        .board_title
+          = board.title
+        - if user_signed_in? && current_user.has_written?(board)
+          .board_actions
+            .dropdown
+              = image_tag 'actions.png', class: 'dropbtn'
+              .dropdown-content.mini
+                %a{href: '#'} Edit
+                %a{href: '#'} Delete
+      .board_content
+        = board.content
+      .board_detail
+        = image_tag 'default-avatar.png'
+  = link_to new_board_path do
+    .new-board
+      %p + Add new borad
