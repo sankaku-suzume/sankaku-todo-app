@@ -9,9 +9,19 @@ class BoardsController < ApplicationController
   def show
   end
 
+  def new
+    @board = current_user.boards.build
+  end
+  
+
   def create
     @board = current_user.boards.build(boards_params)
-    @board.save
+    if @board.save
+      redirect_to board_path(@board), notice: 'Successfully saved.'
+    else
+      flash.now[:error] = 'Failed to save.'
+      render :new
+    end
   end
 
   private

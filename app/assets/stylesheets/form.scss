@@ -13,20 +13,30 @@ input, select {
     border-radius: 10px;
     border: none;
     background-color: $second-bg-color;
+    font-size: 18px;
+    font-family: Avenir;
   }
 }
 
 textarea {
   width: 100%;
   margin: 8px 0px;
-  padding: 8px 8px;
-  min-height: 440px;
-  resize: vertical;
-  border: 1px solid #EBEBEB;
+  padding: 12px 24px;
+  min-height: 200px;
+  border: none;
+  background-color: $second-bg-color;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: Avenir;
 }
 
 .field {
   margin-top: 16px;
+
+  &_with_errors {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .actions {
