@@ -32,6 +32,11 @@ textarea {
 
 .field {
   margin-top: 16px;
+
+  &_with_errors {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .actions {
