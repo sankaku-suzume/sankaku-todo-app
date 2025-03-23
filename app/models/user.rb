@@ -25,6 +25,8 @@ class User < ApplicationRecord
   has_many :boards, dependent: :destroy
   has_one :profile, dependent: :destroy
 
+  delegate :birthday, :age, :gender, to: :profile, allow_nil: true
+
   def has_written?(board)
     boards.exists?(id: board.id)
   end
