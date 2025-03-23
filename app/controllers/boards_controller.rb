@@ -13,7 +13,6 @@ class BoardsController < ApplicationController
     @board = current_user.boards.build
   end
   
-
   def create
     @board = current_user.boards.build(boards_params)
     if @board.save
@@ -21,6 +20,20 @@ class BoardsController < ApplicationController
     else
       flash.now[:error] = 'Failed to save.'
       render :new
+    end
+  end
+
+  def edit
+    @board = current_user.boards.find(params[:id])
+  end
+
+  def update
+    @board = current_user.boards.find(params[:id])
+    if @board.update(boards_params)
+      redirect_to board_path(@board), notice: 'Successfully updated.'
+    else
+      flash.now[:error] = 'Failed to update.'
+      render :edit
     end
   end
 
