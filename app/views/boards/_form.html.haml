@@ -3,13 +3,13 @@
     %li= message
 = form_with(model: board, local: true) do |f|
   .field
-    = f.label :title, 'Name'
+    = f.label :name, 'Name'
     %br/
-    = f.text_field :title, class: 'text'
+    = f.text_field :name, class: 'text'
   .field
-    = f.label :content, 'Description'
+    = f.label :description, 'Description'
     %br/
-    = f.text_area :content
+    = f.text_area :description
   .actions
     = f.submit 'Submit', class: 'btn-primary'
     
