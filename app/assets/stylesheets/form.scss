@@ -3,6 +3,10 @@
 form {
   position: relative;
   height: calc(100vh - 187px);
+
+  &.form-long {
+    height: auto;
+  }
 }
 
 input, select {
@@ -15,6 +19,14 @@ input, select {
     background-color: $second-bg-color;
     font-size: 18px;
     font-family: Avenir;
+  }
+
+  &.btn-primary {
+    margin-top: 24px;
+    
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
