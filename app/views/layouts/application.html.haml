@@ -11,7 +11,7 @@
   %body
     %header.header
       .header_logs
-        %p.header_pageTitle Boards
+        = link_to 'Boards', root_path, class: 'header_pageTitle'
       - if user_signed_in?
         .dropdown
           = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
