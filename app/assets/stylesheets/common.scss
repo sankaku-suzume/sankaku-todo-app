@@ -21,6 +21,7 @@
   &.gray {
     background-color: $second-bg-color;
     min-width: 100px;
+    top: 40px;
   }
 }
 
@@ -31,6 +32,6 @@
   color: $text-base-color;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.6;
   }
 }
