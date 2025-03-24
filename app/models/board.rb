@@ -22,6 +22,7 @@ class Board < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { minimum: 2 }
   
+  has_many :tasks, dependent: :destroy
   belongs_to :user
 
 
