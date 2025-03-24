@@ -11,6 +11,10 @@ $board-avatar-size: 30px;
   &_header {
     display: flex;
     justify-content: space-between;
+
+    a:hover {
+      opacity: 0.6;
+    }
   }
 
   &_title {
