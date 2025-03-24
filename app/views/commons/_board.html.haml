@@ -1,7 +1,8 @@
 .board
   .board_header
-    .board_title
-      = board.name
+    = link_to board_path(board) do
+      .board_title
+        = board.name
     - if user_signed_in? && current_user.has_written?(board)
       .board_actions
         .dropdown
