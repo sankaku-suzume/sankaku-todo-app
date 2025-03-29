@@ -1,5 +1,32 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
+  def new
+    board = Board.find(params[:board_id])
+    @task = board.tasks.build
+  end
+
+  def create
+    board = Board.find(params[:board_id])
+    @task = board.tasks.build(task_params)
+    if @task.save
+      redirect_to board_path(board), notice: 'Task added.'
+    else
+      flash.now[:error] = 'Failed to add task.'
+      render :new
+    end
+  end
+
+  private
+  def task_params
+    params.require(:task).permit(
+      :name,
+      :description,
+      :due
+    ).
+    merge(
+      user_id: current_user.id
+    )
+  end
 
 end

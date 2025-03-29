@@ -1,2 +1,4 @@
 .container
   %h2.board_title= @board.name
+  - @tasks.each do |task|
+    = render 'tasks/task', task: task
