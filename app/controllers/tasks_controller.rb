@@ -26,7 +26,8 @@ class TasksController < ApplicationController
     params.require(:task).permit(
       :name,
       :description,
-      :due
+      :due,
+      :eyecatch
     ).
     merge(
       user_id: current_user.id

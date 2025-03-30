@@ -1,7 +1,7 @@
 %ul
   - task.errors.full_messages.each do |message|
     %li= message
-= form_with(model: task, url: board_tasks_path(task.board_id), local: true) do |f|
+= form_with(model: task, url: board_tasks_path(task.board_id), local: true, class: 'form-long') do |f|
   .field
     = f.label :name, 'Name'
     %br/
@@ -14,6 +14,10 @@
     = f.label :due, 'Due'
     %br/
     = f.date_field :due, class: 'text'
-  .actions
-    = f.submit 'Submit', class: 'btn-primary'
+  .field
+    = f.label :due, 'Eyecatch'
+    %br/
+    = f.file_field :eyecatch
+
+  = f.submit 'Submit', class: 'btn-primary'
     
