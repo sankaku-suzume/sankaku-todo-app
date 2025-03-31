@@ -25,6 +25,12 @@ class TasksController < ApplicationController
     @task = current_user.tasks.find(params[:id])
   end
 
+  def destroy
+    task = current_user.tasks.find(params[:id])
+    task.destroy!
+    redirect_to board_path(task.board_id), notice: 'Successfully deleted.'
+  end
+
   def update
     @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
