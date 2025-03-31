@@ -12,3 +12,8 @@
       = image_tag @task.eyecatch
   .page_text
     %p.page_text-content= @task.description
+
+
+  = link_to new_board_task_comment_path(@task.board_id, @task.id) do
+    .new-card
+      %p + Add new comment
