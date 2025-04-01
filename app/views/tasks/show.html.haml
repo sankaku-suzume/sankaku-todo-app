@@ -12,3 +12,16 @@
       = image_tag @task.eyecatch
   .page_text
     %p.page_text-content= @task.description
+  .comment
+    %h3.comment_title Comment
+    .comment_container
+      - @comments.each do |comment|
+        .comment_content
+          .comment_avatar
+            = image_tag comment.user.avatar_image
+          .comment_text
+            %p= comment.content
+
+    = link_to new_board_task_comment_path(@task.board_id, @task.id) do
+      .new-comment
+        %p + Add new comment
